@@ -175,15 +175,6 @@ input[type="text"]:focus {
     height: 20%;
     resize: vertical;
 }
-
-.mail__letters {
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    height: 80%;
-    background: #f8f9fa;
-}
-
 .letter {
     background: white;
     border: 1px solid #ddd;
@@ -232,5 +223,6 @@ input[type="text"]:focus {
     }
 
 }
+
 
 
