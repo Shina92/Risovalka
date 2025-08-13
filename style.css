@@ -223,7 +223,6 @@ input[type="text"]:focus {
     padding: 15px;
     min-height: 200px;
     background: #f8f9fa;
-    max-height: 400px;
     overflow-y: auto;
 }
 @media screen and (min-width: 425px){
@@ -232,3 +231,4 @@ input[type="text"]:focus {
     }
 
 }
+
