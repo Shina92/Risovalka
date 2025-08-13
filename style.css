@@ -224,6 +224,7 @@ input[type="text"]:focus {
     min-height: 200px;
     background: #f8f9fa;
     overflow-y: auto;
+    height: 80%;
 }
 @media screen and (min-width: 425px){
     body{
@@ -231,4 +232,5 @@ input[type="text"]:focus {
     }
 
 }
+
 
