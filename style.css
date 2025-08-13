@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.container__yourdraw, .container__mail {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container__yourdraw {
+    flex: 2;
+    min-width: 400px;
+}
+
+.container__mail {
+    flex: 1;
+    min-width: 300px;
+}
+
+form {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.size-control {
+    margin-bottom: 15px;
+}
+
+.size-slider {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.input__colors {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.input__colors > div {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.input__colors > div:hover {
+    transform: scale(1.1);
+}
+
+.input__colors > div.selected {
+    border-color: #333;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#black { background: #000; }
+#white { background: #fff; }
+#red { background: #f00; }
+#orange { background: #f80; }
+#yellow { background: #ff0; }
+#green { background: #0f0; }
+#salad { background: #8f0; }
+#skyblue { background: #0ff; }
+#blue { background: #00f; }
+#purple { background: #80f; }
+#pink { background: #f0f; }
+
+.input__canvas {
+    display: grid;
+    gap: 0;
+    background: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pixel {
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    aspect-ratio: 1 / 1; /* всегда квадратные */
+}
+
+.pixel:hover {
+    opacity: 0.8;
+}
+
+.output__code {
+    background: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 12px;
+    min-height: 60px;
+    max-height: 200px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+#mailcode {
+    margin-bottom: 15px;
+    height: 100px;
+    resize: vertical;
+}
+
+.mail__letters {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 200px;
+    background: #f8f9fa;
+}
+
+.letter {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.letter h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.letter p {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.letter-canvas {
+    display: grid;
+    gap: 0;
+    background: #333;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0;
+    max-width: 200px;
+}
+
+.letter-pixel {
+    background: #fff;
+    aspect-ratio: 1 / 1;
+}
+.mail__letters {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 200px;
+    background: #f8f9fa;
+    max-height: 400px;
+    overflow-y: auto;
+}
+@media screen and (min-width: 425px){
+    body{
+        padding: 0;
+    }
+}
